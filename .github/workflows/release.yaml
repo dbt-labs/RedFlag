@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@ee0669bd1cc54295c223e0bb666b733df41de1c5  # actions/checkout@v2
 
     - name: Set up Python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@e9aba2c848f5ebd159c070c61ea2c4e2b122355e  # actions/setup-python@v2
       with:
         python-version: '3.12'
 
@@ -34,7 +34,7 @@ jobs:
       run: poetry publish
 
     - name: Create GitHub Release
-      uses: ncipollo/release-action@v1
+      uses: ncipollo/release-action@b7eabc95ff50cbeeedec83973935c8f306dfcd0b  # ncipollo/release-action@v1
       with:
         artifacts: |
           dist/*.tar.gz
